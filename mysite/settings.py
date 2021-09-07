@@ -26,8 +26,11 @@ SECRET_KEY = 'django-insecure-0bru#i)so8&ra_q@_=9#qd4tow$pavg8wy!9feij^6$k971nd4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'arefinreact.pythonanywhere.com'
+    ]
 
 
 # Application definition
