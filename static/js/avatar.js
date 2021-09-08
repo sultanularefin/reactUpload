@@ -18,6 +18,8 @@ document.getElementById('login_form').addEventListener('submit', function(event)
     // https://arefinreact.pythonanywhere.com/users/
     // https://arefinreact.pythonanywhere.com/api/auth-token/
     // http://127.0.0.1:8000/api/auth-token/
+
+    console.log(`username: ${username} and password: ${password}`);
     fetch(
         // 'http://127.0.0.1:8000/api/auth-token/',
         'https://arefinreact.pythonanywhere.com/api/auth-token/',
