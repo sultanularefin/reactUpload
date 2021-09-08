@@ -59,17 +59,17 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 # copied from here ===> https://newbedev.com/django-rest-framework-image-upload
-class ProductViewSet(BaseViewSet, viewsets.ModelViewSet):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
-
-    @detail_route(methods=['post'])
-    def upload_docs(request):
-        try:
-            file = request.data['file']
-        except KeyError:
-            raise ParseError('Request has no resource file attached')
-        product = Product.objects.create(image=file, ....)
+# class ProductViewSet(BaseViewSet, viewsets.ModelViewSet):
+#     queryset = Product.objects.all()
+#     serializer_class = ProductSerializer
+#
+#     @detail_route(methods=['post'])
+#     def upload_docs(request):
+#         try:
+#             file = request.data['file']
+#         except KeyError:
+#             raise ParseError('Request has no resource file attached')
+#         product = Product.objects.create(image=file, ....)
 
 
 # Routers provide a way of automatically determining the URL conf.
