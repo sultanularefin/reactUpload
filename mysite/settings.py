@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'versatileimagefield',
 ]
 
 REST_FRAMEWORK = {
@@ -145,6 +146,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_URL = '/media/'
+
+
+# below 2 lines ==> https://newbedev.com/django-rest-framework-image-upload
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/' # 'http://myhost:port/media/'
+
+
 
 
 # https://medium.com/django-rest/django-rest-framework-uploading-images-b01fbc19a555
