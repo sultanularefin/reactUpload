@@ -8,7 +8,7 @@ from django.utils import timezone
 import os
 import sys
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+# from django.contrib.auth.models import AbstractUser
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
@@ -38,6 +38,9 @@ def upload_to(instance, filename):
     milliseconds = now.microsecond // 1000
     return f"users/{instance.pk}/{now:%Y%m%d%H%M%S}{milliseconds}{extension}"
 
-class User(AbstractUser):
+# class User2(AbstractUser):
+class User2(models.Model):
+    # pass
     # …
     avatar = models.ImageField(_("Avatar"), upload_to=upload_to, blank=True)
+
