@@ -29,8 +29,8 @@ class UserAvatarUpload(APIView):
 
     parser_classes = [MultiPartParser, FormParser]
 
-    pdb.set_trace();
-    print("at UserAvatarUpload ==> ")
+    # pdb.set_trace();
+    print("===============================at UserAvatarUpload ==> ")
     permission_classes = [IsAuthenticated]
 
     def post(self, request, format=None):
