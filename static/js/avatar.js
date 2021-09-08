@@ -51,7 +51,19 @@ document.getElementById('avatar_form').addEventListener('submit', function(event
     console.log("data: FormData() => username and password (should contain) ", data);
     data.append('avatar', input.files[0]);
 
-    fetch('http://127.0.0.1:8000/api/user-avatar/', {
+
+
+    // https://arefinreact.pythonanywhere.com/api/auth-token/
+    // 'http://127.0.0.1:8000/api/user-avatar/',
+    // https://arefinreact.pythonanywhere.com/api/user-avatar/
+
+    fetch(
+
+
+        // 'http://127.0.0.1:8000/api/user-avatar/',
+        'https://arefinreact.pythonanywhere.com/api/user-avatar/',
+
+        {
         method: 'POST',
         headers: {
             'Authorization': `Token ${userToken}`
