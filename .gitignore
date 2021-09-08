@@ -132,6 +132,8 @@ myvenv/
 readme_dir/
 readme_dir
 
+settings.py 
+
 
 
 # Spyder project settings
