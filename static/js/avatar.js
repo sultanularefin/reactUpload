@@ -1,4 +1,5 @@
 // myproject/site_static/site/js/avatar.js
+// let userToken="d2040cb830f5590e444e2bcf853cdf5e26d2e9d1";
 let userToken;
 
 document.getElementById('login_form').addEventListener('submit', function(event) {
@@ -42,6 +43,7 @@ document.getElementById('avatar_form').addEventListener('submit', function(event
     let input = document.getElementById('id_avatar');
 
     let data = new FormData();
+    console.log("data: FormData() => email and password (should contain) ", data);
     data.append('avatar', input.files[0]);
 
     fetch('http://127.0.0.1:8000/api/user-avatar/', {
