@@ -24,10 +24,17 @@
             <p class="text-muted my-3"><small>Open Developer Console for information about responses.</small></p>
             <h1 class="my-3">1. Log in</h1>
             <form id="login_form">
+{#                <div class="form-group">#}
+{#                    <label for="id_email">Email address</label>#}
+{#                    <input type="email" class="form-control" id="id_email" aria-describedby="emailHelp"#}
+{#                           placeholder="Enter email"/>#}
+{#                </div>#}
+
                 <div class="form-group">
-                    <label for="id_email">Email address</label>
-                    <input type="email" class="form-control" id="id_email" aria-describedby="emailHelp"
-                           placeholder="Enter email"/>
+                    <label for="id_username">User Name</label>
+                    <input type="text" class="form-control" id="id_username"
+                           {% comment %}aria-describedby="emailHelp"{% endcomment %}
+                           placeholder="Enter User Name"/>
                 </div>
                 <div class="form-group">
                     <label for="id_password">Password</label>
