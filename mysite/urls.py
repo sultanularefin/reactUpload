@@ -15,6 +15,8 @@ Including another URLconf
 """
 
 # commented by arefin
+
+
 """
 
 
@@ -44,6 +46,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.models import User
 from rest_framework import serializers, viewsets, routers
+
+
+
+from django.views.generic import TemplateView
+from django.conf import settings
+# from blog import UserAvatarUpload
+from blog.views import UserAvatarUpload
+from rest_framework.authtoken.views import obtain_auth_token
+from django.conf.urls.static import static
+
+
 
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -85,6 +98,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
     # path('', include('blog.urls')),
+
+    path("blog/upload", TemplateView.as_view(template_name="index.html")),
+    path("api/auth-token/", obtain_auth_token, name="rest_auth_token"),
+    path("api/user-avatar/", UserAvatarUpload.as_view(), name="rest_user_avatar_upload"),
+
 ]
 
 
@@ -101,3 +119,7 @@ urlpatterns = [
 ]
 
 """
+
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

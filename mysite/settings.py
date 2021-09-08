@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'versatileimagefield',
     'blog.apps.BlogConfig',
+    'rest_framework.authtoken',
+    #'myproject.apps.accounts'
 ]
 
 REST_FRAMEWORK = {
@@ -52,6 +54,9 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
     ]
 }
 
