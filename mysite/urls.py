@@ -31,12 +31,14 @@ urlpatterns = [
 # modified working codes are below: 7:02 pm:
 
 
-from django.conf import settings
-from django.conf.urls.static import static
+# from django.conf import settings
+# from django.conf.urls.static import static
 
-# above 2 lines were added from this video= > september 09:
-# yt1s.io-Django Rest Framework Series - Image Uploading _ Handling with React Front-end  - Part-8.mp4
+# above 2 lines were added from this video= > september 09: (1)
+# 1. yt1s.io-Django Rest Framework Series - Image Uploading _ Handling with React Front-end  - Part-8.mp4
+# commented the above 2 lines following this tutorial below:
 
+# https://medium.com/django-rest/django-rest-framework-uploading-images-b01fbc19a555
 
 from django.contrib import admin
 from django.urls import path, include
