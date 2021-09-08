@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     #'myproject.apps.accounts'
 ]
 
+# AUTH_USER_MODEL = "accounts.User"
+AUTH_USER_MODEL = 'blog.User'
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
