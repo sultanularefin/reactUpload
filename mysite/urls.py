@@ -31,6 +31,13 @@ urlpatterns = [
 # modified working codes are below: 7:02 pm:
 
 
+from django.conf import settings
+from django.conf.urls.static import static
+
+# above 2 lines were added from this video= > september 09:
+# yt1s.io-Django Rest Framework Series - Image Uploading _ Handling with React Front-end  - Part-8.mp4
+
+
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.models import User
