@@ -129,6 +129,9 @@ venv.bak/
 myvenv/
 .myvenv
 
+readme_dir/
+readme_dir
+
 
 
 # Spyder project settings

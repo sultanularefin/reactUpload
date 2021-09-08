@@ -26,8 +26,11 @@ SECRET_KEY = 'django-insecure-0bru#i)so8&ra_q@_=9#qd4tow$pavg8wy!9feij^6$k971nd4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'arefinreact.pythonanywhere.com'
+    ]
 
 
 # Application definition
@@ -39,7 +42,28 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'versatileimagefield',
+    'blog.apps.BlogConfig',
+    'rest_framework.authtoken',
+    #'myproject.apps.accounts'
 ]
+
+# AUTH_USER_MODEL = "accounts.User"
+# AUTH_USER_MODEL = 'blog.User'
+# AUTH_USER_MODEL = 'auth.User'
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -128,3 +152,19 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# commented as I have decided to follow another tutorial
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+
+
+# below 2 lines ==> https://newbedev.com/django-rest-framework-image-upload
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/' # 'http://myhost:port/media/'
+
+
+
+
+# https://medium.com/django-rest/django-rest-framework-uploading-images-b01fbc19a555
