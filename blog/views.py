@@ -10,6 +10,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import UserAvatarSerializer
+import pdb;
+
 
 # Create your views here.
 
@@ -23,7 +25,12 @@ def pillow(request):
 
 
 class UserAvatarUpload(APIView):
+
+
     parser_classes = [MultiPartParser, FormParser]
+
+    pdb.set_trace();
+    print("at UserAvatarUpload ==> ")
     permission_classes = [IsAuthenticated]
 
     def post(self, request, format=None):
