@@ -5,8 +5,19 @@ document.getElementById('login_form').addEventListener('submit', function(event)
     event.preventDefault();
     let email = document.getElementById('id_email').value;
     let password = document.getElementById('id_password').value;
+    //https://arefinreact.pythonanywhere.com/users/
+    // http://127.0.0.1:8000/api/auth-token/
 
-    fetch('http://127.0.0.1:8000/api/auth-token/', {
+
+
+
+    // https://arefinreact.pythonanywhere.com/users/
+    // https://arefinreact.pythonanywhere.com/api/auth-token/
+    // http://127.0.0.1:8000/api/auth-token/
+    fetch(
+        // 'http://127.0.0.1:8000/api/auth-token/',
+        'https://arefinreact.pythonanywhere.com/api/auth-token/',
+        {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
