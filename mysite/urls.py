@@ -99,7 +99,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     # path('', include('blog.urls')),
 
-    path("blog/upload", TemplateView.as_view(template_name="index.html")),
+    # path("blog/upload", TemplateView.as_view(template_name="pillow.html")),
     path("api/auth-token/", obtain_auth_token, name="rest_auth_token"),
     path("api/user-avatar/", UserAvatarUpload.as_view(), name="rest_user_avatar_upload"),
 

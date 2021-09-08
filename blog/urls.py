@@ -7,7 +7,7 @@ from . import views
 
 urlpatterns = [
     path('', views.post_list, name='post_list'),
-    path('upload/', views.UserAvatarUpload, name='UserAvatarUpload'),
+    path('upload/', views.pillow, name='pillow'),
 
     # url(r'^$', views.index, name='index'),
     # url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),

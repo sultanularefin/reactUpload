@@ -17,6 +17,10 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {})
 
 
+def pillow(request):
+    return render(request, 'blog/pillow.html', {})
+
+
 
 class UserAvatarUpload(APIView):
     parser_classes = [MultiPartParser, FormParser]
