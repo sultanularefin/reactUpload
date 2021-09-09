@@ -14,4 +14,9 @@
 
 
 
+here inside mysite, settings.py file gitignored, thus it will not run. gitignored for secret key.
+
+
+
+
 
